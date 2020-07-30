@@ -23,29 +23,39 @@ public class JuegoAdivinaNumero extends Juegos {
             System.out.println("Adivina un numero entre 0 y 10");
             numero = leer.nextInt();
             leer.nextLine();
-            if (numero == numeroAdivinar) {
-                System.out.println("Has acertado");
-                actualizarRecord();
-                seguir = false;
 
-            } else {
-                if (quitarVidas()) {
-                    if (numero > numeroAdivinar) {
-                        System.out.println("El numero es menor");
+            if (validaNumero(numero)) {
 
-
-                    } else {
-                        System.out.println("El numero es mayor");
-                    }
-                    System.out.println("TRY AGAIN");
-                } else {
-                    System.out.println("El juego ha terminado");
+                if (numero == numeroAdivinar) {
+                    System.out.println("Has acertado");
+                    actualizarRecord();
                     seguir = false;
+
+                } else {
+                    if (quitarVidas()) {
+                        if (numero > numeroAdivinar) {
+                            System.out.println("El numero es menor");
+
+
+                        } else {
+                            System.out.println("El numero es mayor");
+                        }
+                        System.out.println("TRY AGAIN");
+                    } else {
+                        System.out.println("El juego ha terminado");
+                        seguir = false;
+                    }
                 }
+
+
             }
-
-
         }
         while(seguir) ;
+    }
+
+    public boolean validaNumero(int num){
+
+
+        return true;
     }
 }
