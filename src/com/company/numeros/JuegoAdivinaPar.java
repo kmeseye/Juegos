@@ -1,4 +1,4 @@
-package com.company;
+package com.company.numeros;
 
 public class JuegoAdivinaPar extends JuegoAdivinaNumero {
     public JuegoAdivinaPar(int vidas, int numero) {

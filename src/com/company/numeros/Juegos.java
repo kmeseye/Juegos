@@ -1,4 +1,4 @@
-package com.company;
+package com.company.numeros;
 
 public abstract class Juegos {
     private int vidas;

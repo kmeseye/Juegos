@@ -1,4 +1,6 @@
-package com.company;
+package com.company.numeros;
+
+import com.company.interfaces.Jugable;
 
 import java.util.Scanner;
 
@@ -59,13 +61,13 @@ public class JuegoAdivinaNumero extends Juegos implements Jugable {
         return true;
     }
 
-    @Override
+
     public void muestrainfo() {
         System.out.println("Tiene que intorsducir numeros hasta que acierte el numero aleatorio");
 
     }
 
-    @Override
+
     public void muestraNombre() {
         System.out.println("Juego adivina Numero");
         this.vidasRestantes();
