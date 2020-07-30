@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class JuegoAdivinaNumero extends Juegos {
+public class JuegoAdivinaNumero extends Juegos implements Jugable {
     private int numeroAdivinar;
 
     public JuegoAdivinaNumero(int vidas, int numero) {
@@ -50,12 +50,25 @@ public class JuegoAdivinaNumero extends Juegos {
 
             }
         }
-        while(seguir) ;
+        while (seguir);
     }
 
-    public boolean validaNumero(int num){
+    public boolean validaNumero(int num) {
 
 
         return true;
     }
+
+    @Override
+    public void muestrainfo() {
+        System.out.println("Tiene que intorsducir numeros hasta que acierte el numero aleatorio");
+
+    }
+
+    @Override
+    public void muestraNombre() {
+        System.out.println("Juego adivina Numero");
+        this.vidasRestantes();
+    }
+
 }

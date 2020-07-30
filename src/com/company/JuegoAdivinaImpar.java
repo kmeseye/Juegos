@@ -14,4 +14,15 @@ public class JuegoAdivinaImpar extends JuegoAdivinaNumero {
             return true;
         }
     }
+
+    @Override
+    public void muestrainfo() {
+        System.out.println("Juego adivina Numero imPar");
+        this.vidasRestantes();
+    }
+
+    @Override
+    public void muestraNombre() {
+        System.out.println("Tiene que introduce numeros imPares hasta que acierte el numero par aleatorio");
+    }
 }
